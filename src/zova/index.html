@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZOVA — Luxury E-Commerce · Coming Soon</title>
+  <meta name="description" content="ZOVA is Sri Lanka's upcoming premium e-commerce destination. Luxury fragrances, fashion, electronics & more — launching soon." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="nav">
+  <span class="nav-logo">ZOVA</span>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#viewer">Preview</a></li>
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#notify">Early Access</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('notify').scrollIntoView({behavior:'smooth'})">Get Early Access</button>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section id="hero">
+  <!-- Background -->
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div id="particles"></div>
+
+  <!-- Left: Copy -->
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Sri Lanka's Next Shopping Revolution
+    </div>
+
+    <h1 class="hero-h1">
+      <span class="line1">Luxury Scents.</span><br>
+      <span class="line1">Premium Style.</span><br>
+      <span class="line2">Delivered Fast.</span>
+    </h1>
+
+    <p class="hero-sub">
+      ZOVA is Sri Lanka's upcoming all-in-one e-commerce platform — exclusive fragrances, fashion, electronics & more, with lightning-fast delivery right to your door.
+    </p>
+
+    <!-- Countdown -->
+    <div class="countdown">
+      <div class="cd-unit"><div class="cd-num" id="cd-days">47</div><div class="cd-lbl">Days</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-hours">12</div><div class="cd-lbl">Hours</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-mins">30</div><div class="cd-lbl">Mins</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-secs">00</div><div class="cd-lbl">Secs</div></div>
+    </div>
+
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="showToast('🚀 We\'re not live yet — sign up below to be first!')">Shop Now</button>
+      <button class="btn-outline" onclick="document.getElementById('notify').scrollIntoView({behavior:'smooth'})">Get Early Access →</button>
+    </div>
+  </div>
+
+  <!-- Right: 3-D Perfume Scene -->
+  <div class="hero-visual">
+    <div class="hero-glow"></div>
+    <div class="ring ring-1"></div>
+    <div class="ring ring-2"></div>
+    <div class="ring ring-3"></div>
+
+    <!-- Floating product chips -->
+    <div class="float-chip chip-1">
+      <span class="chip-icon">🌹</span>
+      <div><span class="chip-name">Rose Elixir</span><span class="chip-price">Rs. 8,500</span></div>
+    </div>
+    <div class="float-chip chip-2">
+      <span class="chip-icon">🖤</span>
+      <div><span class="chip-name">Noir Intense</span><span class="chip-price">Rs. 12,000</span></div>
+    </div>
+    <div class="float-chip chip-3">
+      <span class="chip-icon">🌊</span>
+      <div><span class="chip-name">Ocean Breeze</span><span class="chip-price">Rs. 6,800</span></div>
+    </div>
+    <div class="float-chip chip-4">
+      <span class="chip-icon">✨</span>
+      <div><span class="chip-name">Gold Oud</span><span class="chip-price">Rs. 15,000</span></div>
+    </div>
+
+    <!-- Floating perfume bottle (3-D hover animation) -->
+    <div class="bottle-wrap" title="Hover to see 3-D effect!">
+      <img class="hero-bottle-img" src="images/hero-perfume.png" alt="ZOVA Signature Perfume" />
+    </div>
+
+    <!-- Rating -->
+    <div class="rating-badge">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <div class="rating-text">4.9 · 12,400+ reviews</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ============================================================
+     BRAND PARTNERS STRIP
+     ============================================================ -->
+<section id="brands">
+  <span class="brand-lbl">Partnering With</span>
+  <div class="brands-list">
+    <span class="brand-name">Chanel</span>
+    <span class="brand-name">Dior</span>
+    <span class="brand-name">Gucci</span>
+    <span class="brand-name">Samsung</span>
+    <span class="brand-name">Apple</span>
+    <span class="brand-name">Zara</span>
+    <span class="brand-name">Armani</span>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FEATURES
+     ============================================================ -->
+<section id="features">
+  <p class="section-label">Why Choose ZOVA</p>
+  <h2 class="section-title">Built Different. Delivered Better.</h2>
+
+  <div class="features-grid">
+    <div class="feat-card reveal">
+      <div class="feat-icon">⚡</div>
+      <div class="feat-title">Same-Day Delivery</div>
+      <div class="feat-desc">Order before noon, receive by evening. Our express network covers Colombo and 25 major cities across Sri Lanka — faster than anywhere else.</div>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon">💎</div>
+      <div class="feat-title">100% Authentic Products</div>
+      <div class="feat-desc">Every item is sourced directly from verified brand partners. Certificate of authenticity included with all premium fragrances and luxury goods.</div>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon">🔒</div>
+      <div class="feat-title">Secure Online Payments</div>
+      <div class="feat-desc">Bank-grade 256-bit encryption on every transaction. Pay by card, bank transfer, or cash on delivery — your choice, always secure.</div>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon">🏷️</div>
+      <div class="feat-title">Unbeatable Prices</div>
+      <div class="feat-desc">Direct-from-supplier pricing means you save up to 40% vs high-street stores. Daily flash deals and exclusive member-only discounts every week.</div>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon">↩️</div>
+      <div class="feat-title">Hassle-Free Returns</div>
+      <div class="feat-desc">30-day easy returns on all products. Not happy? We collect from your door for free and process your refund within 24 hours.</div>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon">🌟</div>
+      <div class="feat-title">1 Million+ Products</div>
+      <div class="feat-desc">Fragrances, fashion, electronics, home décor, beauty, and food — one platform for everything. New arrivals added every single day.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ============================================================
+     PRODUCT SHOWCASE (3-D tilt cards)
+     ============================================================ -->
+<section id="products">
+  <p class="section-label">Product Preview</p>
+  <h2 class="section-title">Hover to See Products in 3-D</h2>
+
+  <div class="products-grid">
+
+    <!-- Perfume 1 -->
+    <div class="prod-scene reveal">
+      <div class="prod-card" onclick="comingSoon('Rose Elixir EDP')">
+        <div class="prod-img-wrap">
+          <img src="images/perfume-rose.png" alt="Rose Elixir Perfume" loading="lazy" />
+        </div>
+        <div class="prod-cat">Fragrance</div>
+        <div class="prod-name">Rose Elixir EDP — 100ml</div>
+        <div class="prod-footer">
+          <span class="prod-price">Rs. 8,500</span>
+          <span class="prod-tag">TRENDING</span>
+        </div>
+        <div class="cs-overlay">
+          <div class="cs-label">Coming Soon</div>
+          <div class="cs-sub">Click to get notified</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Perfume 2 -->
+    <div class="prod-scene reveal">
+      <div class="prod-card" onclick="comingSoon('Noir Intense')">
+        <div class="prod-img-wrap">
+          <img src="images/perfume-noir.png" alt="Noir Intense Perfume" loading="lazy" />
+        </div>
+        <div class="prod-cat">Fragrance</div>
+        <div class="prod-name">Noir Intense — 75ml</div>
+        <div class="prod-footer">
+          <span class="prod-price">Rs. 12,000</span>
+          <span class="prod-tag">BESTSELLER</span>
+        </div>
+        <div class="cs-overlay">
+          <div class="cs-label">Coming Soon</div>
+          <div class="cs-sub">Click to get notified</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Perfume 3 -->
+    <div class="prod-scene reveal">
+      <div class="prod-card" onclick="comingSoon('Ocean Breeze')">
+        <div class="prod-img-wrap">
+          <img src="images/perfume-ocean.png" alt="Ocean Breeze Perfume" loading="lazy" />
+        </div>
+        <div class="prod-cat">Fragrance</div>
+        <div class="prod-name">Ocean Breeze — 50ml</div>
+        <div class="prod-footer">
+          <span class="prod-price">Rs. 6,800</span>
+          <span class="prod-tag">NEW</span>
+        </div>
+        <div class="cs-overlay">
+          <div class="cs-label">Coming Soon</div>
+          <div class="cs-sub">Click to get notified</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Perfume 4 -->
+    <div class="prod-scene reveal">
+      <div class="prod-card" onclick="comingSoon('Gold Oud Collection')">
+        <div class="prod-img-wrap">
+          <img src="images/perfume-gold.png" alt="Gold Oud Perfume" loading="lazy" />
+        </div>
+        <div class="prod-cat">Fragrance</div>
+        <div class="prod-name">Gold Oud Collection — 100ml</div>
+        <div class="prod-footer">
+          <span class="prod-price">Rs. 15,000</span>
+          <span class="prod-tag">LUXURY</span>
+        </div>
+        <div class="cs-overlay">
+          <div class="cs-label">Coming Soon</div>
+          <div class="cs-sub">Click to get notified</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Perfume 5 -->
+    <div class="prod-scene reveal">
+      <div class="prod-card" onclick="comingSoon('Oud Royale')">
+        <div class="prod-img-wrap">
+          <img src="images/perfume-oud.png" alt="Oud Royale Perfume" loading="lazy" />
+        </div>
+        <div class="prod-cat">Fragrance</div>
+        <div class="prod-name">Oud Royale — 120ml</div>
+        <div class="prod-footer">
+          <span class="prod-price">Rs. 18,500</span>
+          <span class="prod-tag">EXCLUSIVE</span>
+        </div>
+        <div class="cs-overlay">
+          <div class="cs-label">Coming Soon</div>
+          <div class="cs-sub">Click to get notified</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Perfume (featured) -->
+    <div class="prod-scene reveal">
+      <div class="prod-card" onclick="comingSoon('ZOVA Signature')">
+        <div class="prod-img-wrap">
+          <img src="images/hero-perfume.png" alt="ZOVA Signature Perfume" loading="lazy" />
+        </div>
+        <div class="prod-cat">Fragrance — Signature</div>
+        <div class="prod-name">ZOVA Signature — 150ml</div>
+        <div class="prod-footer">
+          <span class="prod-price">Rs. 22,000</span>
+          <span class="prod-tag">LAUNCH SPECIAL</span>
+        </div>
+        <div class="cs-overlay">
+          <div class="cs-label">Coming Soon</div>
+          <div class="cs-sub">Click to get notified</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ============================================================
+     INTERACTIVE 3-D PERFUME VIEWER
+     ============================================================ -->
+<section id="viewer">
+  <!-- Info side -->
+  <div class="viewer-info reveal">
+    <p class="section-label">Interactive 3-D Preview</p>
+    <h2>Experience Fragrance<br><span class="grad-text">Before You Buy</span></h2>
+    <p>
+      At ZOVA, we believe you should feel a product before you purchase it. Our immersive 3-D viewer lets you rotate, inspect, and explore every detail of our premium fragrances — from the elegant bottle design to the label craftsmanship.
+    </p>
+    <p>
+      <strong style="color:var(--cream)">Click &amp; drag the bottle</strong> to rotate it in 360°. Switch between our five signature scent collections using the buttons below.
+    </p>
+
+    <div class="viewer-options">
+      <button class="scent-btn active" data-scent="noir">Noir</button>
+      <button class="scent-btn" data-scent="rose">Rose</button>
+      <button class="scent-btn" data-scent="ocean">Ocean</button>
+      <button class="scent-btn" data-scent="gold">Gold</button>
+      <button class="scent-btn" data-scent="oud">Oud</button>
+    </div>
+
+    <button class="btn-primary" onclick="document.getElementById('notify').scrollIntoView({behavior:'smooth'})">
+      Notify Me at Launch
+    </button>
+  </div>
+
+  <!-- 3-D Stage -->
+  <div class="viewer-stage">
+    <div class="viewer-glow" id="viewer-glow"></div>
+    <div class="viewer-ring vr-1"></div>
+    <div class="viewer-ring vr-2"></div>
+
+    <div class="viewer-bottle" id="viewer-bottle">
+      <img id="viewer-img" src="images/perfume-noir.png" alt="ZOVA Perfume — 3-D View" style="transition:opacity .3s" />
+      <div class="viewer-label" id="viewer-label-text">NOIR — Deep &amp; Mysterious</div>
+    </div>
+  </div>
+</section>
+<p class="drag-hint" style="text-align:center;padding-bottom:2rem">☝ Drag the bottle to rotate &amp; explore in 3-D</p>
+
+<div class="divider"></div>
+
+
+<!-- ============================================================
+     PRODUCT CATEGORIES
+     ============================================================ -->
+<section id="categories">
+  <p class="section-label">Browse by Category</p>
+  <h2 class="section-title">Everything You Love, One Place</h2>
+
+  <div class="cat-grid">
+    <div class="cat-card reveal" onclick="comingSoon('Fragrances')">
+      <img class="cat-img" src="images/cat-perfume.jpg" alt="Fragrances Category" loading="lazy" />
+      <div class="cat-overlay">
+        <div>
+          <span class="cat-name">Fragrances</span>
+          <span class="cat-count">500+ Products Coming</span>
+        </div>
+      </div>
+    </div>
+    <div class="cat-card reveal" onclick="comingSoon('Electronics')">
+      <img class="cat-img" src="images/cat-electronics.jpg" alt="Electronics Category" loading="lazy" />
+      <div class="cat-overlay">
+        <div>
+          <span class="cat-name">Electronics</span>
+          <span class="cat-count">2,000+ Products Coming</span>
+        </div>
+      </div>
+    </div>
+    <div class="cat-card reveal" onclick="comingSoon('Fashion')">
+      <img class="cat-img" src="images/cat-fashion.jpg" alt="Fashion Category" loading="lazy" />
+      <div class="cat-overlay">
+        <div>
+          <span class="cat-name">Fashion</span>
+          <span class="cat-count">5,000+ Products Coming</span>
+        </div>
+      </div>
+    </div>
+    <div class="cat-card reveal" onclick="comingSoon('Home & Living')">
+      <img class="cat-img" src="images/cat-home.jpg" alt="Home & Living Category" loading="lazy" />
+      <div class="cat-overlay">
+        <div>
+          <span class="cat-name">Home &amp; Living</span>
+          <span class="cat-count">3,000+ Products Coming</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ============================================================
+     EARLY ACCESS / NOTIFY
+     ============================================================ -->
+<section id="notify">
+  <div class="notify-inner reveal">
+    <p class="section-label">Be First in Line</p>
+    <h2 class="section-title" style="margin-bottom:.5rem">Get Early Access &amp;<br>Exclusive Launch Deals</h2>
+    <p>
+      Join <span class="notify-hl">50,000+ early birds</span> already signed up. Get notified the moment we go live — plus an exclusive <span class="notify-hl">20% launch discount</span> and free delivery on your first 3 orders, just for subscribers.
+    </p>
+    <div class="notify-form">
+      <input type="email" class="notify-input" id="email-input" placeholder="your@email.com" autocomplete="email" />
+      <button class="btn-primary" id="notify-btn">Notify Me 🔔</button>
+    </div>
+    <div class="notify-perks">
+      <div class="perk"><span>✅</span> 20% launch discount</div>
+      <div class="perk"><span>✅</span> Free delivery × 3</div>
+      <div class="perk"><span>✅</span> Early product access</div>
+      <div class="perk"><span>✅</span> No spam, ever</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     STATS
+     ============================================================ -->
+<section id="stats">
+  <div class="stats-grid reveal">
+    <div>
+      <div class="stat-num">50K+</div>
+      <div class="stat-label">Early Sign-Ups</div>
+    </div>
+    <div>
+      <div class="stat-num">1M+</div>
+      <div class="stat-label">Products Ready</div>
+    </div>
+    <div>
+      <div class="stat-num">100+</div>
+      <div class="stat-label">Brand Partners</div>
+    </div>
+    <div>
+      <div class="stat-num">25</div>
+      <div class="stat-label">Cities at Launch</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="footer-logo-text">ZOVA</span>
+      <p>Sri Lanka's upcoming premium e-commerce destination. Luxury fragrances, fashion, electronics, and more — all in one place, delivered fast.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#" onclick="showToast('Coming soon!')">About ZOVA</a></li>
+        <li><a href="#" onclick="showToast('Coming soon!')">Careers</a></li>
+        <li><a href="#" onclick="showToast('Coming soon!')">Press</a></li>
+        <li><a href="#" onclick="showToast('Coming soon!')">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#" onclick="showToast('Coming soon!')">Help Center</a></li>
+        <li><a href="#" onclick="showToast('Coming soon!')">Track Order</a></li>
+        <li><a href="#" onclick="showToast('Coming soon!')">Returns</a></li>
+        <li><a href="#notify">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#" onclick="showToast('Coming soon!')">Privacy Policy</a></li>
+        <li><a href="#" onclick="showToast('Coming soon!')">Terms of Use</a></li>
+        <li><a href="#" onclick="showToast('Coming soon!')">Cookie Policy</a></li>
+        <li><a href="#" onclick="showToast('Coming soon!')">Seller Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 ZOVA (Pvt) Ltd. All rights reserved. Sri Lanka.</span>
+    <div class="social-icons">
+      <button class="social-btn" title="Facebook"  onclick="showToast('Facebook — coming soon!')">f</button>
+      <button class="social-btn" title="Instagram" onclick="showToast('Instagram — coming soon!')">in</button>
+      <button class="social-btn" title="TikTok"    onclick="showToast('TikTok — coming soon!')">tt</button>
+      <button class="social-btn" title="YouTube"   onclick="showToast('YouTube — coming soon!')">▶</button>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Toast notification -->
+<div id="toast"></div>
+
+<!-- Main script -->
+<script src="js/main.js"></script>
+</body>
+</html>

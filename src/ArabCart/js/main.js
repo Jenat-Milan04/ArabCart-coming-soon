@@ -149,11 +149,11 @@ function initBottleDrag() {
 
 /* ---------- Scent selector (viewer) ---------- */
 const scentData = {
-  noir:  { label: 'NOIR — Deep & Mysterious', src: 'images/perfume-noir.png',  glow: 'rgba(80,50,20,.45)' },
-  rose:  { label: 'ROSE — Floral & Elegant',  src: 'images/perfume-rose.png',  glow: 'rgba(180,60,80,.4)' },
-  ocean: { label: 'OCEAN — Fresh & Bold',     src: 'images/perfume-ocean.png', glow: 'rgba(30,90,150,.45)' },
-  gold:  { label: 'GOLD — Warm & Luxurious',  src: 'images/perfume-gold.png',  glow: 'rgba(169,111,68,.55)' },
-  oud:   { label: 'OUD — Rich & Smoky',       src: 'images/perfume-oud.png',   glow: 'rgba(100,50,10,.5)' }
+  noir:  { label: 'NOIR — Deep & Mysterious', src: 'images/NIOR.png',                        glow: 'rgba(80,50,20,.45)' },
+  rose:  { label: 'ROSE — Floral & Elegant',  src: 'images/Rose Elixir-1751488663.png',      glow: 'rgba(180,60,80,.4)' },
+  ocean: { label: 'OCEAN — Fresh & Bold',     src: 'images/OCEAN.png',                       glow: 'rgba(30,90,150,.45)' },
+  gold:  { label: 'GOLD — Warm & Luxurious',  src: 'images/OUD.png',                         glow: 'rgba(169,111,68,.55)' },
+  oud:   { label: 'OUD — Rich & Smoky',       src: 'images/ROYALE.png',                      glow: 'rgba(100,50,10,.5)' }
 };
 
 function initScentSelector() {
@@ -187,8 +187,11 @@ function initSmoothLinks() {
 }
 
 /* ---------- "Coming soon" button handler ---------- */
-window.comingSoon = function(name) {
-  showToast(`🚀 "${name}" — available at launch! Sign up to be first.`);
+window.comingSoon = function(name, soonLaunch) {
+  const msg = soonLaunch
+    ? `⏳ "${name}" will be launching as soon as possible — Fragrances are available at launch!`
+    : `🚀 "${name}" — available at launch! Sign up to be first.`;
+  showToast(msg);
 };
 
 /* ---------- INIT ---------- */
